@@ -1,0 +1,1 @@
+# Wallhaven.cc API Wrapper

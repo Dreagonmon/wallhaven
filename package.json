@@ -1,0 +1,17 @@
+{
+  "name": "wallhaven",
+  "version": "0.0.1",
+  "description": "Wallhaven.cc API",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "npx esbuild index.js --outfile=dist/wallhaven.js --bundle --minify --sourcemap --target=esnext --format=esm",
+    "serve": "npx esbuild index.js --servedir=. --serve=8000 --outfile=dist/wallhaven.js --bundle --minify --sourcemap --target=esnext --format=esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "placeholder"
+  },
+  "author": "Dreagonmon",
+  "license": "MIT"
+}

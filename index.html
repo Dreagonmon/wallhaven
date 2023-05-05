@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 'unsafe-eval' 'unsafe-inline' https://wallhaven-cors.deno.dev">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Test</title>
+    <style>
+        html {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script type="module">
+        import { WallhavenAPI } from "./index.js";
+        const api = new WallhavenAPI("https://wallhaven-cors.deno.dev/api");
+
+        window.addEventListener("load", async () => {
+            console.log("==== loaded ====");
+            const rst = await api.listWallpapers({
+                categories: "100",
+                purity: "100",
+                sorting: "random",
+                limit: 1,
+            });
+            console.log(rst);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Test</h1>
+    <hr>
+    <img src="https://wallhaven-cors.deno.dev/api/extra/relay?href=https%3A%2F%2Fth.wallhaven.cc%2Flg%2Fzy%2Fzyxvqy.jpg"
+        crossorigin="anonymous" />
+</body>
+
+</html>
